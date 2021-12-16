@@ -1,0 +1,10 @@
+2
+ANGLE_STEP 3
+MOVE_STEP 0.2
+6
+TEA_PORT 1 0.1 0.2 0.3
+CUBE 1 0.2 0.3 0.4
+FILE mesh\1.mesh mesh\2.texture
+FILE mesh\2.mesh mesh\1.texture
+OBJ obj\arrow_up.obj
+OBJ obj\tv.obj
