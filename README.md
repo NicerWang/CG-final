@@ -1,5 +1,17 @@
 # Computer Graphics 大作业
 
+环境：Visual Studio 2019 (freeglut)
+
+![](./效果图.png)
+
+* 优化摄像机的移动逻辑
+
+   WASD 可以控制摄像机以当前视角前后左右移动，不受限于坐标轴
+
+* 支持物体放大缩小旋转 / 支持摄像头锁定到物体上
+
+* 添加天空盒
+
 ## 操作方式
 
 | Key        | Effect                                                       |
@@ -18,7 +30,9 @@
 | `o`        | 复位所有物体 |
 | `p` | 退出                                     |
 
-## `config`配置
+## config配置文件
+
+为了在降低程序和配置的耦合度，设计了配置文件。
 
 ```python
 2  # 配置项个数
@@ -39,9 +53,9 @@ OBJ obj\arrow_up.obj
 OBJ obj\tv.obj
 ```
 
-## Mesh配置
+## 外部模型配置配置
 
-`.mesh`文件为标准格式，着重介绍`.texture`格式
+`.mesh`文件为标准格式，记录顶点、法向量和面信息，这里着重介绍`.texture`格式：
 
 * 纹理模式
 
@@ -76,5 +90,7 @@ OBJ obj\tv.obj
   255 255 0
   ```
 
-  
 
+## 核心类设计图
+
+![ClassDiagram](./ClassDiagram.png)
